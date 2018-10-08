@@ -1,4 +1,4 @@
-package day_02;
+package homework_02;
 
 public class GuessLauncher {
 	public static void main(String[] args) {
@@ -7,7 +7,7 @@ public class GuessLauncher {
 		player p3 = new player();
 		GuessGame game = new GuessGame(p1, p2, p3);
 		for(int i = 1; i <= 3; i++) {
-			System.out.println("µÚ" + i + "ÂÖ");
+			System.out.println("ï¿½ï¿½" + i + "ï¿½ï¿½");
 			game.startGame();
 		}
 		game.result();

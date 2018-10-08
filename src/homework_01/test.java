@@ -1,4 +1,4 @@
-package day_01;
+package homework_01;
 
 public class test {
 
@@ -15,7 +15,7 @@ public class test {
 		System.out.println(c.hashCode());
 		System.out.println("a : d  " + (a==d));
 		System.out.println("c : f  " + (c==f));
-		System.out.println("c:" + c.hashCode()); //²»Çå³þÕâ¸öÎªÊ²Ã´ÊÇÒ»ÑùµÄ
+		System.out.println("c:" + c.hashCode()); //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÎªÊ²Ã´ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½
 		System.out.println("f:" + f.hashCode());
 
 	}

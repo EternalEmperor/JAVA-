@@ -1,8 +1,8 @@
-package day_02;
+package homework_02;
 
 public class player {
-	public int score; //µÃ·Ö
-	public int number;//ÓÃ»§Òª²Â²âµÄËæ»úÊý
+	public int score; //ï¿½Ã·ï¿½
+	public int number;//ï¿½Ã»ï¿½Òªï¿½Â²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	
 
 

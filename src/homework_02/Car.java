@@ -1,10 +1,10 @@
-package day_02;
+package homework_02;
 
 public class Car {
-	public String type; //фШЁ╣пм╨е
-	public int tank; //сйоДхща©
-	public int oilConsumption; //╨дсма©
-	public int tank_remain; //йёсЮсма©
+	public String type; //О©╫О©╫О©╫О©╫О©╫м╨О©╫
+	public int tank; //О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫
+	public int oilConsumption; //О©╫О©╫О©╫О©╫О©╫О©╫
+	public int tank_remain; //йёО©╫О©╫О©╫О©╫О©╫О©╫
 	
 	
 	
@@ -24,10 +24,10 @@ public class Car {
 		return false;
 	}
 		else if((tank_remain + num) > tank) {
-			System.out.println("Ё╛╧ЩсмоДхща©ё╛╪ссмй╖╟э");
+			System.out.println("О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫й╖О©╫О©╫");
 			return false;
 		}else {
-			System.out.println("╪ссмЁи╧╕");
+			System.out.println("О©╫О©╫О©╫мЁи╧О©╫");
 			return true;
 		}
 		

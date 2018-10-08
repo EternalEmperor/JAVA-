@@ -1,4 +1,4 @@
-package day_03;
+package homework_03;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -11,7 +11,7 @@ public class test {
 		Integer integer1=list.get(0);
 		int a = integer1;
 		System.out.println(a);
-		//ÏÖÔÚÊ¹integer1=3;ÎÊlistÀïÃæµÄÔªËØÊÇ·ñ¸Ä±ä£¿
+		//ï¿½ï¿½ï¿½ï¿½Ê¹integer1=3;ï¿½ï¿½listï¿½ï¿½ï¿½ï¿½ï¿½Ôªï¿½ï¿½ï¿½Ç·ï¿½Ä±ä£¿
 		integer1 = 3;
 		Integer integer2=list.get(0);
 		int b = integer2;

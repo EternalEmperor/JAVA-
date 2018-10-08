@@ -1,4 +1,4 @@
-package day_02;
+package homework_02;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -33,7 +33,7 @@ public class GuessGame {
 	
 	public void result() {
 		for(player p : Arr) {
-			System.out.println(p.toString()+"�ĳɼ�"+p.getScore());
+			System.out.println(p.toString()+"�ĳɼ�"+p.getScore());
 		}
 	}
 	

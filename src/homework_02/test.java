@@ -1,4 +1,4 @@
-package day_02;
+package homework_02;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -15,10 +15,10 @@ public class test {
 		car_Arr.add(car1);
 		for(Car c : car_Arr) {
 			System.out.println(
-					"Æû³µÀàĞÍ£º"+c.getType()+
-					"ÓÊÏäÈİÁ¿£º"+c.getTank()+
-					"ºÄÓÍÁ¿£º" +c.getOilConsumption()+
-					"Ê£ÓàÓÍÁ¿£º"+c.getTank_remain()
+					"ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í£ï¿½"+c.getType()+
+					"ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½"+c.getTank()+
+					"ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½" +c.getOilConsumption()+
+					"Ê£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½"+c.getTank_remain()
 					);
 		}
 	}

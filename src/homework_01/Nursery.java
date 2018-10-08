@@ -1,9 +1,9 @@
-package day_01;
+package homework_01;
 
 public class Nursery {
 
 	public static void main(String[] args) {
-		//ÊýÆ¡¾ÆÆ¿Í¯Ò¥´úÂë
+		//ï¿½ï¿½Æ¡ï¿½ï¿½Æ¿Í¯Ò¥ï¿½ï¿½ï¿½ï¿½
 		int start = 99;
 		int end = 0;
 		String word = "bottles";
