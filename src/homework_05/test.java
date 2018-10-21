@@ -18,6 +18,7 @@ public class test {
 		ts.getResult(src, tar, distance);
 		ts = new plane();
 		ts.getResult(src, tar, distance);
+	
 	}
 	
 }
