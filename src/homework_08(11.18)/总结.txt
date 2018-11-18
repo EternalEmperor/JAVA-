@@ -1,0 +1,46 @@
+1.解决的第一个问题是没有线程池的工具类，该工具类需要创建一个线程池，同时该工具类进行线程的检查和返回结果
+主要的input类和output类继承Callable<Object>接口，该接口和Runnable相似，但是后者不返回线程结果，而前者可以返回线程结果
+利用线程池的管理工具，返回线程的执行结果，修改休眠时间，可以使得某种线程在执行完以后在指定时间内不再争抢cpu的轮转片段
+使得其他线程可以进行执行，就比如在output中增加sleep(5)而input中增加sleep(1)，这时候当output执行完以后在很长的时间内都是input在
+执行，output进入休眠状态不再执行
+
+2.在休眠时间相同的情况下增加线程数量，扩张线程池的大小，通过多条线程来执行该过程，相当于开了多个进水口和出水口，这时候若
+休眠时间相同，则某个功能线程数占优，则有更大的概率抢到cpu的时间，从而更多的执行，但是也可以通过休眠时间的长短来进行调节，
+
+3.其中发现一个现象，就是最开始的线程并不是按指定的进500出300执行的，而是有一些零散的数字，后面在input和output中添加了不同的
+语句数目，发现一个线程在执行到一半的时候又输出了另外一个线程的语句，猜想是宏观上的多核并行处理，在同一时刻，双核在同时执行
+两个不同的线程。
+
+4.在主线程中添加sleep，会发现其实main函数本身就是一个线程，若最后要执行指定线程的cancle工作，放在不同的地方会有不同的执行结果
+若放在Timer实例化之前，并没有效果，线程创建以后直接执行cancle会没有结果，若放在Timer实例化之后，cancle之前， 则主线程会休眠等待，
+一直等待上面的线程执行完毕以后才会往下走
+try {
+			TimeUnit.SECONDS.sleep(1);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+        
+        WaterTimeTask task = new WaterTimeTask();
+        Timer timer = new Timer();
+        timer.schedule(task,1000);
+//        timer.schedule(task,calendar.getTime(),1000*60*60*24);
+        
+        timer.cancel();
+
+		直接关闭
+
+		WaterTimeTask task = new WaterTimeTask();
+        Timer timer = new Timer();
+        timer.schedule(task,1000);
+//        timer.schedule(task,calendar.getTime(),1000*60*60*24);
+        try {
+			TimeUnit.SECONDS.sleep(1);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+        
+        timer.cancel();
+		
+		会执行完以后等待一秒关闭
